@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Strona główna";
+}
+
+<div class="container text-center mt-5">
+    <h1>Witamy na stronie zarządzania szkoleniami</h1>
+    <p class="mt-3">Zaloguj się lub zarejestruj, aby kontynuować.</p>
+
+    <div class="mt-4">
+        <a href="@Url.Action("Login", "Home")" class="btn btn-primary btn-lg mx-2">Logowanie</a>
+        <a href="@Url.Action("Register", "Home")" class="btn btn-success btn-lg mx-2">Rejestracja</a>
+    </div>
+</div>
+

@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Logowanie";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Logowanie</h2>
+
+    <form asp-action="Login" method="post" class="mt-4">
+        <div class="form-group">
+            <label for="Email">Email</label>
+            @Html.TextBox("Email", null, new { @class = "form-control", placeholder = "Wprowadź email" })
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="Password">Hasło</label>
+            <input type="password" id="Password" name="Password" class="form-control" placeholder="Wprowadź hasło" />
+        </div>
+
+        <div class="form-check mt-2">
+            <input type="checkbox" class="form-check-input" id="showPassword" />
+            <label class="form-check-label" for="showPassword">Pokaż hasło</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-4">Zaloguj się</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('showPassword').addEventListener('change', function () {
+        var passwordInput = document.getElementById('Password');
+        passwordInput.type = this.checked ? 'text' : 'password';
+    });
+</script>
